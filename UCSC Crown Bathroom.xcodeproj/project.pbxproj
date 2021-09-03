@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E98203B26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */; };
+		0E98203D26E2E807003B86C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98203C26E2E807003B86C0 /* ContentView.swift */; };
+		0E98203F26E2E808003B86C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E98203E26E2E808003B86C0 /* Assets.xcassets */; };
+		0E98204226E2E808003B86C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E98204126E2E808003B86C0 /* Preview Assets.xcassets */; };
+		0E98204D26E2E809003B86C0 /* UCSC_Crown_BathroomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98204C26E2E809003B86C0 /* UCSC_Crown_BathroomTests.swift */; };
+		0E98205826E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98205726E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E98204926E2E809003B86C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E98202F26E2E807003B86C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E98203626E2E807003B86C0;
+			remoteInfo = "UCSC Crown Bathroom";
+		};
+		0E98205426E2E809003B86C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E98202F26E2E807003B86C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E98203626E2E807003B86C0;
+			remoteInfo = "UCSC Crown Bathroom";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E98203726E2E807003B86C0 /* UCSC Crown Bathroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCSC Crown Bathroom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSC_Crown_BathroomApp.swift; sourceTree = "<group>"; };
+		0E98203C26E2E807003B86C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E98203E26E2E808003B86C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E98204126E2E808003B86C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E98204326E2E808003B86C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E98204826E2E809003B86C0 /* UCSC Crown BathroomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCSC Crown BathroomTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E98204C26E2E809003B86C0 /* UCSC_Crown_BathroomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSC_Crown_BathroomTests.swift; sourceTree = "<group>"; };
+		0E98204E26E2E809003B86C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E98205326E2E809003B86C0 /* UCSC Crown BathroomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCSC Crown BathroomUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E98205726E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSC_Crown_BathroomUITests.swift; sourceTree = "<group>"; };
+		0E98205926E2E809003B86C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E98203426E2E807003B86C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E98204526E2E809003B86C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E98205026E2E809003B86C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E98202E26E2E807003B86C0 = {
+			isa = PBXGroup;
+			children = (
+				0E98203926E2E807003B86C0 /* UCSC Crown Bathroom */,
+				0E98204B26E2E809003B86C0 /* UCSC Crown BathroomTests */,
+				0E98205626E2E809003B86C0 /* UCSC Crown BathroomUITests */,
+				0E98203826E2E807003B86C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E98203826E2E807003B86C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E98203726E2E807003B86C0 /* UCSC Crown Bathroom.app */,
+				0E98204826E2E809003B86C0 /* UCSC Crown BathroomTests.xctest */,
+				0E98205326E2E809003B86C0 /* UCSC Crown BathroomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E98203926E2E807003B86C0 /* UCSC Crown Bathroom */ = {
+			isa = PBXGroup;
+			children = (
+				0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */,
+				0E98203C26E2E807003B86C0 /* ContentView.swift */,
+				0E98203E26E2E808003B86C0 /* Assets.xcassets */,
+				0E98204326E2E808003B86C0 /* Info.plist */,
+				0E98204026E2E808003B86C0 /* Preview Content */,
+			);
+			path = "UCSC Crown Bathroom";
+			sourceTree = "<group>";
+		};
+		0E98204026E2E808003B86C0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0E98204126E2E808003B86C0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0E98204B26E2E809003B86C0 /* UCSC Crown BathroomTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E98204C26E2E809003B86C0 /* UCSC_Crown_BathroomTests.swift */,
+				0E98204E26E2E809003B86C0 /* Info.plist */,
+			);
+			path = "UCSC Crown BathroomTests";
+			sourceTree = "<group>";
+		};
+		0E98205626E2E809003B86C0 /* UCSC Crown BathroomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0E98205726E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift */,
+				0E98205926E2E809003B86C0 /* Info.plist */,
+			);
+			path = "UCSC Crown BathroomUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E98203626E2E807003B86C0 /* UCSC Crown Bathroom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E98205C26E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown Bathroom" */;
+			buildPhases = (
+				0E98203326E2E807003B86C0 /* Sources */,
+				0E98203426E2E807003B86C0 /* Frameworks */,
+				0E98203526E2E807003B86C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UCSC Crown Bathroom";
+			productName = "UCSC Crown Bathroom";
+			productReference = 0E98203726E2E807003B86C0 /* UCSC Crown Bathroom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E98204726E2E809003B86C0 /* UCSC Crown BathroomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E98205F26E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown BathroomTests" */;
+			buildPhases = (
+				0E98204426E2E809003B86C0 /* Sources */,
+				0E98204526E2E809003B86C0 /* Frameworks */,
+				0E98204626E2E809003B86C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E98204A26E2E809003B86C0 /* PBXTargetDependency */,
+			);
+			name = "UCSC Crown BathroomTests";
+			productName = "UCSC Crown BathroomTests";
+			productReference = 0E98204826E2E809003B86C0 /* UCSC Crown BathroomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0E98205226E2E809003B86C0 /* UCSC Crown BathroomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E98206226E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown BathroomUITests" */;
+			buildPhases = (
+				0E98204F26E2E809003B86C0 /* Sources */,
+				0E98205026E2E809003B86C0 /* Frameworks */,
+				0E98205126E2E809003B86C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E98205526E2E809003B86C0 /* PBXTargetDependency */,
+			);
+			name = "UCSC Crown BathroomUITests";
+			productName = "UCSC Crown BathroomUITests";
+			productReference = 0E98205326E2E809003B86C0 /* UCSC Crown BathroomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E98202F26E2E807003B86C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					0E98203626E2E807003B86C0 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					0E98204726E2E809003B86C0 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 0E98203626E2E807003B86C0;
+					};
+					0E98205226E2E809003B86C0 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 0E98203626E2E807003B86C0;
+					};
+				};
+			};
+			buildConfigurationList = 0E98203226E2E807003B86C0 /* Build configuration list for PBXProject "UCSC Crown Bathroom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E98202E26E2E807003B86C0;
+			productRefGroup = 0E98203826E2E807003B86C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E98203626E2E807003B86C0 /* UCSC Crown Bathroom */,
+				0E98204726E2E809003B86C0 /* UCSC Crown BathroomTests */,
+				0E98205226E2E809003B86C0 /* UCSC Crown BathroomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E98203526E2E807003B86C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E98204226E2E808003B86C0 /* Preview Assets.xcassets in Resources */,
+				0E98203F26E2E808003B86C0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E98204626E2E809003B86C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E98205126E2E809003B86C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E98203326E2E807003B86C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E98203D26E2E807003B86C0 /* ContentView.swift in Sources */,
+				0E98203B26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E98204426E2E809003B86C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E98204D26E2E809003B86C0 /* UCSC_Crown_BathroomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E98204F26E2E809003B86C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E98205826E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E98204A26E2E809003B86C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E98203626E2E807003B86C0 /* UCSC Crown Bathroom */;
+			targetProxy = 0E98204926E2E809003B86C0 /* PBXContainerItemProxy */;
+		};
+		0E98205526E2E809003B86C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E98203626E2E807003B86C0 /* UCSC Crown Bathroom */;
+			targetProxy = 0E98205426E2E809003B86C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E98205A26E2E809003B86C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E98205B26E2E809003B86C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E98205D26E2E809003B86C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"UCSC Crown Bathroom/Preview Content\"";
+				DEVELOPMENT_TEAM = 232Q6PF625;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "UCSC Crown Bathroom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Crown-Bathroom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E98205E26E2E809003B86C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"UCSC Crown Bathroom/Preview Content\"";
+				DEVELOPMENT_TEAM = 232Q6PF625;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "UCSC Crown Bathroom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Crown-Bathroom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0E98206026E2E809003B86C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 232Q6PF625;
+				INFOPLIST_FILE = "UCSC Crown BathroomTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Crown-BathroomTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UCSC Crown Bathroom.app/UCSC Crown Bathroom";
+			};
+			name = Debug;
+		};
+		0E98206126E2E809003B86C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 232Q6PF625;
+				INFOPLIST_FILE = "UCSC Crown BathroomTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Crown-BathroomTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UCSC Crown Bathroom.app/UCSC Crown Bathroom";
+			};
+			name = Release;
+		};
+		0E98206326E2E809003B86C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 232Q6PF625;
+				INFOPLIST_FILE = "UCSC Crown BathroomUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Crown-BathroomUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "UCSC Crown Bathroom";
+			};
+			name = Debug;
+		};
+		0E98206426E2E809003B86C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 232Q6PF625;
+				INFOPLIST_FILE = "UCSC Crown BathroomUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Crown-BathroomUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "UCSC Crown Bathroom";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E98203226E2E807003B86C0 /* Build configuration list for PBXProject "UCSC Crown Bathroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E98205A26E2E809003B86C0 /* Debug */,
+				0E98205B26E2E809003B86C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E98205C26E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown Bathroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E98205D26E2E809003B86C0 /* Debug */,
+				0E98205E26E2E809003B86C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E98205F26E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown BathroomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E98206026E2E809003B86C0 /* Debug */,
+				0E98206126E2E809003B86C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E98206226E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown BathroomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E98206326E2E809003B86C0 /* Debug */,
+				0E98206426E2E809003B86C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E98202F26E2E807003B86C0 /* Project object */;
+}
