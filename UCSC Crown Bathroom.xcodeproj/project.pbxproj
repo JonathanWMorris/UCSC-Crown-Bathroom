@@ -13,6 +13,14 @@
 		0E98204226E2E808003B86C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E98204126E2E808003B86C0 /* Preview Assets.xcassets */; };
 		0E98204D26E2E809003B86C0 /* UCSC_Crown_BathroomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98204C26E2E809003B86C0 /* UCSC_Crown_BathroomTests.swift */; };
 		0E98205826E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98205726E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift */; };
+		0E98206626E3441B003B86C0 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98206526E3441B003B86C0 /* HouseView.swift */; };
+		0E98206826E34711003B86C0 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98206726E34711003B86C0 /* House.swift */; };
+		0E98206A26E34838003B86C0 /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98206926E34838003B86C0 /* extentions.swift */; };
+		0E98206C26E34B74003B86C0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98206B26E34B74003B86C0 /* ContentViewModel.swift */; };
+		0E98206E26E42432003B86C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E98206D26E42432003B86C0 /* GoogleService-Info.plist */; };
+		9FB4A994C8C519C7D3CAD759 /* Pods_UCSC_Crown_BathroomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCC51FE92A235C0132D36F3 /* Pods_UCSC_Crown_BathroomTests.framework */; };
+		ECAC974049641F3FB485CCF0 /* Pods_UCSC_Crown_Bathroom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41B0490782A0B528607CA92 /* Pods_UCSC_Crown_Bathroom.framework */; };
+		ED1F93C149492F78A3188CA4 /* Pods_UCSC_Crown_Bathroom_UCSC_Crown_BathroomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD39B4C5ED3029B7061C3D7 /* Pods_UCSC_Crown_Bathroom_UCSC_Crown_BathroomUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,20 @@
 		0E98205326E2E809003B86C0 /* UCSC Crown BathroomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCSC Crown BathroomUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E98205726E2E809003B86C0 /* UCSC_Crown_BathroomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSC_Crown_BathroomUITests.swift; sourceTree = "<group>"; };
 		0E98205926E2E809003B86C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E98206526E3441B003B86C0 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
+		0E98206726E34711003B86C0 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		0E98206926E34838003B86C0 /* extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
+		0E98206B26E34B74003B86C0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		0E98206D26E42432003B86C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1C9415FDA12F03FE8460B091 /* Pods-UCSC Crown Bathroom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCSC Crown Bathroom.release.xcconfig"; path = "Target Support Files/Pods-UCSC Crown Bathroom/Pods-UCSC Crown Bathroom.release.xcconfig"; sourceTree = "<group>"; };
+		38B44F3FB0D3B34EA073D5EB /* Pods-UCSC Crown BathroomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCSC Crown BathroomTests.debug.xcconfig"; path = "Target Support Files/Pods-UCSC Crown BathroomTests/Pods-UCSC Crown BathroomTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E47600CC93A2B4323CBEDE3 /* Pods-UCSC Crown BathroomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCSC Crown BathroomTests.release.xcconfig"; path = "Target Support Files/Pods-UCSC Crown BathroomTests/Pods-UCSC Crown BathroomTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E8B03F876B1A62C8E285070 /* Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.release.xcconfig"; path = "Target Support Files/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6C6A5CE7FA2A65707C406E6F /* Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.debug.xcconfig"; path = "Target Support Files/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CCC51FE92A235C0132D36F3 /* Pods_UCSC_Crown_BathroomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UCSC_Crown_BathroomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7398DDB08B34FBE51AE57ABF /* Pods-UCSC Crown Bathroom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCSC Crown Bathroom.debug.xcconfig"; path = "Target Support Files/Pods-UCSC Crown Bathroom/Pods-UCSC Crown Bathroom.debug.xcconfig"; sourceTree = "<group>"; };
+		B41B0490782A0B528607CA92 /* Pods_UCSC_Crown_Bathroom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UCSC_Crown_Bathroom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD39B4C5ED3029B7061C3D7 /* Pods_UCSC_Crown_Bathroom_UCSC_Crown_BathroomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UCSC_Crown_Bathroom_UCSC_Crown_BathroomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECAC974049641F3FB485CCF0 /* Pods_UCSC_Crown_Bathroom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB4A994C8C519C7D3CAD759 /* Pods_UCSC_Crown_BathroomTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1F93C149492F78A3188CA4 /* Pods_UCSC_Crown_Bathroom_UCSC_Crown_BathroomUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +104,8 @@
 				0E98204B26E2E809003B86C0 /* UCSC Crown BathroomTests */,
 				0E98205626E2E809003B86C0 /* UCSC Crown BathroomUITests */,
 				0E98203826E2E807003B86C0 /* Products */,
+				71EFB1F8C29534B3F537D8F3 /* Pods */,
+				2CB59CABE4934E1EF15A3231 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +124,13 @@
 			children = (
 				0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */,
 				0E98203C26E2E807003B86C0 /* ContentView.swift */,
+				0E98206526E3441B003B86C0 /* HouseView.swift */,
+				0E98206B26E34B74003B86C0 /* ContentViewModel.swift */,
+				0E98206726E34711003B86C0 /* House.swift */,
+				0E98206926E34838003B86C0 /* extentions.swift */,
 				0E98203E26E2E808003B86C0 /* Assets.xcassets */,
 				0E98204326E2E808003B86C0 /* Info.plist */,
+				0E98206D26E42432003B86C0 /* GoogleService-Info.plist */,
 				0E98204026E2E808003B86C0 /* Preview Content */,
 			);
 			path = "UCSC Crown Bathroom";
@@ -130,6 +162,30 @@
 			path = "UCSC Crown BathroomUITests";
 			sourceTree = "<group>";
 		};
+		2CB59CABE4934E1EF15A3231 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B41B0490782A0B528607CA92 /* Pods_UCSC_Crown_Bathroom.framework */,
+				DAD39B4C5ED3029B7061C3D7 /* Pods_UCSC_Crown_Bathroom_UCSC_Crown_BathroomUITests.framework */,
+				6CCC51FE92A235C0132D36F3 /* Pods_UCSC_Crown_BathroomTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71EFB1F8C29534B3F537D8F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7398DDB08B34FBE51AE57ABF /* Pods-UCSC Crown Bathroom.debug.xcconfig */,
+				1C9415FDA12F03FE8460B091 /* Pods-UCSC Crown Bathroom.release.xcconfig */,
+				6C6A5CE7FA2A65707C406E6F /* Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.debug.xcconfig */,
+				4E8B03F876B1A62C8E285070 /* Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.release.xcconfig */,
+				38B44F3FB0D3B34EA073D5EB /* Pods-UCSC Crown BathroomTests.debug.xcconfig */,
+				3E47600CC93A2B4323CBEDE3 /* Pods-UCSC Crown BathroomTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E98205C26E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown Bathroom" */;
 			buildPhases = (
+				882DB0AE8456051D6D94AFF3 /* [CP] Check Pods Manifest.lock */,
 				0E98203326E2E807003B86C0 /* Sources */,
 				0E98203426E2E807003B86C0 /* Frameworks */,
 				0E98203526E2E807003B86C0 /* Resources */,
+				35B1F5CE2B09355404899F0E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E98205F26E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown BathroomTests" */;
 			buildPhases = (
+				4612DD4B8FEAD89A21528EEC /* [CP] Check Pods Manifest.lock */,
 				0E98204426E2E809003B86C0 /* Sources */,
 				0E98204526E2E809003B86C0 /* Frameworks */,
 				0E98204626E2E809003B86C0 /* Resources */,
@@ -172,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E98206226E2E809003B86C0 /* Build configuration list for PBXNativeTarget "UCSC Crown BathroomUITests" */;
 			buildPhases = (
+				49E816AAF9A9F2FF5744B961 /* [CP] Check Pods Manifest.lock */,
 				0E98204F26E2E809003B86C0 /* Sources */,
 				0E98205026E2E809003B86C0 /* Frameworks */,
 				0E98205126E2E809003B86C0 /* Resources */,
+				8E3C92350A1E9718AA56B7CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +296,7 @@
 			files = (
 				0E98204226E2E808003B86C0 /* Preview Assets.xcassets in Resources */,
 				0E98203F26E2E808003B86C0 /* Assets.xcassets in Resources */,
+				0E98206E26E42432003B86C0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +316,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35B1F5CE2B09355404899F0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UCSC Crown Bathroom/Pods-UCSC Crown Bathroom-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UCSC Crown Bathroom/Pods-UCSC Crown Bathroom-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UCSC Crown Bathroom/Pods-UCSC Crown Bathroom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4612DD4B8FEAD89A21528EEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UCSC Crown BathroomTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49E816AAF9A9F2FF5744B961 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		882DB0AE8456051D6D94AFF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UCSC Crown Bathroom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E3C92350A1E9718AA56B7CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests/Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E98203326E2E807003B86C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E98206626E3441B003B86C0 /* HouseView.swift in Sources */,
 				0E98203D26E2E807003B86C0 /* ContentView.swift in Sources */,
+				0E98206C26E34B74003B86C0 /* ContentViewModel.swift in Sources */,
+				0E98206A26E34838003B86C0 /* extentions.swift in Sources */,
+				0E98206826E34711003B86C0 /* House.swift in Sources */,
 				0E98203B26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +583,7 @@
 		};
 		0E98205D26E2E809003B86C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7398DDB08B34FBE51AE57ABF /* Pods-UCSC Crown Bathroom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,6 +606,7 @@
 		};
 		0E98205E26E2E809003B86C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9415FDA12F03FE8460B091 /* Pods-UCSC Crown Bathroom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +629,7 @@
 		};
 		0E98206026E2E809003B86C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38B44F3FB0D3B34EA073D5EB /* Pods-UCSC Crown BathroomTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +652,7 @@
 		};
 		0E98206126E2E809003B86C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E47600CC93A2B4323CBEDE3 /* Pods-UCSC Crown BathroomTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +675,7 @@
 		};
 		0E98206326E2E809003B86C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C6A5CE7FA2A65707C406E6F /* Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +696,7 @@
 		};
 		0E98206426E2E809003B86C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8B03F876B1A62C8E285070 /* Pods-UCSC Crown Bathroom-UCSC Crown BathroomUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
