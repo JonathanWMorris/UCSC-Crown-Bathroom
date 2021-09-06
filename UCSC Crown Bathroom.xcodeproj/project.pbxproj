@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4A538526E5900B00E8306C /* FloorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A538426E5900B00E8306C /* FloorsView.swift */; };
+		0E4A538726E590B900E8306C /* FloorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A538626E590B900E8306C /* FloorViewModel.swift */; };
+		0E4A538C26E59E4700E8306C /* FloorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A538B26E59E4700E8306C /* FloorView.swift */; };
 		0E98203B26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */; };
 		0E98203D26E2E807003B86C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98203C26E2E807003B86C0 /* ContentView.swift */; };
 		0E98203F26E2E808003B86C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E98203E26E2E808003B86C0 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4A538426E5900B00E8306C /* FloorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorsView.swift; sourceTree = "<group>"; };
+		0E4A538626E590B900E8306C /* FloorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorViewModel.swift; sourceTree = "<group>"; };
+		0E4A538B26E59E4700E8306C /* FloorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorView.swift; sourceTree = "<group>"; };
 		0E98203726E2E807003B86C0 /* UCSC Crown Bathroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCSC Crown Bathroom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSC_Crown_BathroomApp.swift; sourceTree = "<group>"; };
 		0E98203C26E2E807003B86C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4A538826E590D100E8306C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E98206B26E34B74003B86C0 /* ContentViewModel.swift */,
+				0E4A538626E590B900E8306C /* FloorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E4A538926E590DE00E8306C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E98203C26E2E807003B86C0 /* ContentView.swift */,
+				0E4A538426E5900B00E8306C /* FloorsView.swift */,
+				0E4A538B26E59E4700E8306C /* FloorView.swift */,
+				0E98206526E3441B003B86C0 /* HouseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E4A538A26E590E800E8306C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E98206726E34711003B86C0 /* House.swift */,
+				0E98206926E34838003B86C0 /* extentions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0E98202E26E2E807003B86C0 = {
 			isa = PBXGroup;
 			children = (
@@ -123,11 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */,
-				0E98203C26E2E807003B86C0 /* ContentView.swift */,
-				0E98206526E3441B003B86C0 /* HouseView.swift */,
-				0E98206B26E34B74003B86C0 /* ContentViewModel.swift */,
-				0E98206726E34711003B86C0 /* House.swift */,
-				0E98206926E34838003B86C0 /* extentions.swift */,
+				0E4A538A26E590E800E8306C /* Model */,
+				0E4A538926E590DE00E8306C /* View */,
+				0E4A538826E590D100E8306C /* ViewModel */,
 				0E98203E26E2E808003B86C0 /* Assets.xcassets */,
 				0E98204326E2E808003B86C0 /* Info.plist */,
 				0E98206D26E42432003B86C0 /* GoogleService-Info.plist */,
@@ -182,7 +215,6 @@
 				38B44F3FB0D3B34EA073D5EB /* Pods-UCSC Crown BathroomTests.debug.xcconfig */,
 				3E47600CC93A2B4323CBEDE3 /* Pods-UCSC Crown BathroomTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -429,6 +461,9 @@
 				0E98206C26E34B74003B86C0 /* ContentViewModel.swift in Sources */,
 				0E98206A26E34838003B86C0 /* extentions.swift in Sources */,
 				0E98206826E34711003B86C0 /* House.swift in Sources */,
+				0E4A538C26E59E4700E8306C /* FloorView.swift in Sources */,
+				0E4A538726E590B900E8306C /* FloorViewModel.swift in Sources */,
+				0E4A538526E5900B00E8306C /* FloorsView.swift in Sources */,
 				0E98203B26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

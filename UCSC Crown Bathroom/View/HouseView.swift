@@ -29,7 +29,7 @@ struct HouseView: View {
             .shadow(color: .black, radius: 2, x: 0, y: 0)
         }
         .clipShape(RoundedRectangle(cornerRadius: 25))
-        .shadow(color: .black, radius: 10, x: 3, y: 3)
+        .shadow(color: .black, radius: 5, x: 3, y: 3)
     }
 }
 

@@ -21,9 +21,9 @@ struct ContentView: View {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(contentViewModel.sampleData) { house in
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: FloorsView(houseName: house.id),
                             label: {
-                                HouseView(houseName: house.name,
+                                HouseView(houseName: house.id,
                                           symbolName: house.symbolName,
                                           hexColor1: house.hexColor1,
                                           hexColor2: house.hexColor2)
@@ -34,10 +34,11 @@ struct ContentView: View {
                 }
                 .padding(.horizontal, 5)
             }
+            .animation(.easeIn)
             .navigationTitle("Select House")
         }
         .onAppear{
-            contentViewModel.fetchData()
+            contentViewModel.getHouseListData()
         }
     }
 }
