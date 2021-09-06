@@ -9,10 +9,7 @@ import Foundation
 import Firebase
 
 class ContentViewModel: ObservableObject {
-    @Published var sampleData = [
-        House(id: "Descartes", hexColor1: "0666FF",
-              hexColor2: "5A5ADE", symbolName: "gamecontroller")
-    ]
+    @Published var houses: [House] = []
     
     private var db = Firestore.firestore()
     
@@ -42,7 +39,7 @@ class ContentViewModel: ObservableObject {
             
             
             DispatchQueue.main.async {
-                self.sampleData = houses
+                self.houses = houses
             }
         }
     }

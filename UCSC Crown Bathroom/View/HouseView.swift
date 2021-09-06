@@ -8,20 +8,17 @@
 import SwiftUI
 
 struct HouseView: View {
-    let houseName: String
-    let symbolName: String
-    let hexColor1: String
-    let hexColor2: String
+    let house: House
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(hex: hexColor1),Color(hex: hexColor2)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color(hex: house.hexColor1),Color(hex: house.hexColor2)]), startPoint: .topLeading, endPoint: .bottomTrailing)
             VStack{
-                Text(Image(systemName: symbolName))
+                Text(Image(systemName: house.symbolName))
                     .font(.largeTitle)
                     .fontWeight(.medium)
                 
-                Text(houseName)
+                Text(house.id)
                     .font(.title)
                     .fontWeight(.bold)
             }
@@ -35,7 +32,7 @@ struct HouseView: View {
 
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView(houseName: "Descartes", symbolName: "house", hexColor1: "0666FF", hexColor2: "5A5ADE")
+        HouseView(house: House(id: "Descartes", hexColor1: "0666FF", hexColor2: "5A5ADE", symbolName: "house"))
             .frame(width: 200, height: 200, alignment: .center)
             .previewLayout(.sizeThatFits)
             .padding(40)

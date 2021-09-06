@@ -18,22 +18,25 @@ struct FloorsView: View {
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .padding([.leading, .top], 15)
+                .animation(.linear)
             
-            ForEach(floorViewModel.floors) { floor in
-                NavigationLink(
-                    destination: Text("Work in progress"),
-                    label: {
-                        FloorView(floor: floor)
-                            .frame(height: 100, alignment: .center)
-                            .padding(.horizontal)
-                    })
-                    .frame(height: 150)
-                    .padding(5)
+            VStack{
+                ForEach(floorViewModel.floors) { floor in
+                    NavigationLink(
+                        destination: ShowersView(houseName: houseName, floorName: floor.id),
+                        label: {
+                            FloorView(floor: floor)
+                                .padding()
+                                .frame(height: 200)
+                                .padding(.top, 20)
+                        })
+                        .padding(5)
+                }
             }
+            .animation(.easeIn)
             
             Spacer()
         }
-        .animation(.easeIn)
         .navigationTitle(houseName)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{

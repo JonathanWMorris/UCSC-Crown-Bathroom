@@ -19,14 +19,11 @@ struct ContentView: View {
         NavigationView{
             ScrollView{
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(contentViewModel.sampleData) { house in
+                    ForEach(contentViewModel.houses) { house in
                         NavigationLink(
                             destination: FloorsView(houseName: house.id),
                             label: {
-                                HouseView(houseName: house.id,
-                                          symbolName: house.symbolName,
-                                          hexColor1: house.hexColor1,
-                                          hexColor2: house.hexColor2)
+                                HouseView(house: house)
                             })
                             .frame(height: 150)
                             .padding(5)
