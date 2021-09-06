@@ -10,8 +10,8 @@ import SwiftUI
 struct ShowersView: View {
     @StateObject var showersViewModel: ShowersViewModel = ShowersViewModel()
     
-    let houseName:String
-    let floorName: String
+    let house: House
+    let floor: Floor
     
     var body: some View {
         VStack(alignment: .leading){
@@ -30,7 +30,7 @@ struct ShowersView: View {
             
             VStack{
                 ForEach(showersViewModel.showers) { shower in
-                    ShowerView(shower: shower)
+                    ShowerView(shower: shower, house: house, floor: floor)
                         .padding()
                 }
             }
@@ -38,10 +38,10 @@ struct ShowersView: View {
             
             Spacer()
         }
-        .navigationTitle("\(floorName) Floor Showers")
+        .navigationTitle("\(floor.id) Floor Showers")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{
-            showersViewModel.getShowersInfo(house: houseName, floor: floorName)
+            showersViewModel.getShowersInfo(house: house.id, floor: floor.id)
         }
     }
 }
@@ -49,7 +49,7 @@ struct ShowersView: View {
 struct ShowersView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            ShowersView(showersViewModel: ShowersViewModel(), houseName: "Descartes", floorName: "First")
+            ShowersView(showersViewModel: ShowersViewModel(), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House"), floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: ""))
         }
     }
 }

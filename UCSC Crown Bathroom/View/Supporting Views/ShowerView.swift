@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ShowerView: View {
     let shower: Shower
+    let house: House
+    let floor: Floor
     
     var body: some View {
         ZStack{
@@ -53,7 +55,7 @@ struct ShowerView: View {
                 
                 if !shower.isOccupied {
                     NavigationLink(
-                        destination: Text("Start Shower"),
+                        destination: StartShowerView(shower: shower, house: house, floor: floor),
                         label: {
                             Text("Start")
                                 .padding(30)
@@ -73,12 +75,12 @@ struct ShowerView: View {
 
 struct ShowerView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerView(shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom"))
+        ShowerView(shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom"), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"), floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: ""))
             .frame( height: 200, alignment: .center)
             .padding()
             .previewLayout(.sizeThatFits)
         
-        ShowerView(shower: Shower(id: "Shower 1", isOccupied: true, lastUpdated: Date(), bathroom: "Main Bathroom"))
+        ShowerView(shower: Shower(id: "Shower 1", isOccupied: true, lastUpdated: Date(), bathroom: "Main Bathroom"), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"), floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: ""))
             .frame( height: 200, alignment: .center)
             .padding()
             .previewLayout(.sizeThatFits)

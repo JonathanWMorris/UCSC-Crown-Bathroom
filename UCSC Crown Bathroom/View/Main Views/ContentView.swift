@@ -21,7 +21,7 @@ struct ContentView: View {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(contentViewModel.houses) { house in
                         NavigationLink(
-                            destination: FloorsView(houseName: house.id),
+                            destination: FloorsView(house: house),
                             label: {
                                 HouseView(house: house)
                             })

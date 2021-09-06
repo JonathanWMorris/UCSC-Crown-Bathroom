@@ -13,6 +13,9 @@
 		0E4A538E26E5BF6F00E8306C /* ShowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A538D26E5BF6F00E8306C /* ShowersView.swift */; };
 		0E4A539226E5BFD000E8306C /* ShowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A539126E5BFD000E8306C /* ShowersViewModel.swift */; };
 		0E4A539426E5D2B200E8306C /* ShowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A539326E5D2B200E8306C /* ShowerView.swift */; };
+		0E5AD15626E6978A00EC563A /* StartShowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AD15526E6978A00EC563A /* StartShowerView.swift */; };
+		0E5AD15826E6984700EC563A /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AD15726E6984700EC563A /* Floor.swift */; };
+		0E5AD15A26E6984D00EC563A /* Shower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AD15926E6984D00EC563A /* Shower.swift */; };
 		0E98203B26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */; };
 		0E98203D26E2E807003B86C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98203C26E2E807003B86C0 /* ContentView.swift */; };
 		0E98203F26E2E808003B86C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E98203E26E2E808003B86C0 /* Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		0E4A538D26E5BF6F00E8306C /* ShowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowersView.swift; sourceTree = "<group>"; };
 		0E4A539126E5BFD000E8306C /* ShowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowersViewModel.swift; sourceTree = "<group>"; };
 		0E4A539326E5D2B200E8306C /* ShowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerView.swift; sourceTree = "<group>"; };
+		0E5AD15526E6978A00EC563A /* StartShowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartShowerView.swift; sourceTree = "<group>"; };
+		0E5AD15726E6984700EC563A /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		0E5AD15926E6984D00EC563A /* Shower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shower.swift; sourceTree = "<group>"; };
 		0E98203726E2E807003B86C0 /* UCSC Crown Bathroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCSC Crown Bathroom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E98203A26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSC_Crown_BathroomApp.swift; sourceTree = "<group>"; };
 		0E98203C26E2E807003B86C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,12 +128,8 @@
 		0E4A538926E590DE00E8306C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0E98203C26E2E807003B86C0 /* ContentView.swift */,
-				0E98206526E3441B003B86C0 /* HouseView.swift */,
-				0E4A538426E5900B00E8306C /* FloorsView.swift */,
-				0E4A538B26E59E4700E8306C /* FloorView.swift */,
-				0E4A538D26E5BF6F00E8306C /* ShowersView.swift */,
-				0E4A539326E5D2B200E8306C /* ShowerView.swift */,
+				0EBD845C26E6CADC0053B6F8 /* Main Views */,
+				0EBD845D26E6CAE50053B6F8 /* Supporting Views */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				0E98206726E34711003B86C0 /* House.swift */,
+				0E5AD15726E6984700EC563A /* Floor.swift */,
+				0E5AD15926E6984D00EC563A /* Shower.swift */,
 				0E98206926E34838003B86C0 /* extentions.swift */,
 			);
 			path = Model;
@@ -202,6 +206,27 @@
 				0E98205926E2E809003B86C0 /* Info.plist */,
 			);
 			path = "UCSC Crown BathroomUITests";
+			sourceTree = "<group>";
+		};
+		0EBD845C26E6CADC0053B6F8 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E98203C26E2E807003B86C0 /* ContentView.swift */,
+				0E4A538426E5900B00E8306C /* FloorsView.swift */,
+				0E4A538D26E5BF6F00E8306C /* ShowersView.swift */,
+				0E5AD15526E6978A00EC563A /* StartShowerView.swift */,
+			);
+			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		0EBD845D26E6CAE50053B6F8 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E98206526E3441B003B86C0 /* HouseView.swift */,
+				0E4A538B26E59E4700E8306C /* FloorView.swift */,
+				0E4A539326E5D2B200E8306C /* ShowerView.swift */,
+			);
+			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
 		2CB59CABE4934E1EF15A3231 /* Frameworks */ = {
@@ -473,10 +498,13 @@
 				0E98206826E34711003B86C0 /* House.swift in Sources */,
 				0E4A538C26E59E4700E8306C /* FloorView.swift in Sources */,
 				0E4A538726E590B900E8306C /* FloorViewModel.swift in Sources */,
+				0E5AD15626E6978A00EC563A /* StartShowerView.swift in Sources */,
 				0E4A538526E5900B00E8306C /* FloorsView.swift in Sources */,
+				0E5AD15826E6984700EC563A /* Floor.swift in Sources */,
 				0E4A539226E5BFD000E8306C /* ShowersViewModel.swift in Sources */,
 				0E4A538E26E5BF6F00E8306C /* ShowersView.swift in Sources */,
 				0E98203B26E2E807003B86C0 /* UCSC_Crown_BathroomApp.swift in Sources */,
+				0E5AD15A26E6984D00EC563A /* Shower.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

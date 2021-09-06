@@ -10,7 +10,7 @@ import SwiftUI
 struct FloorsView: View {
     @StateObject var floorViewModel = FloorViewModel()
     
-    let houseName: String
+    let house: House
     
     var body: some View {
         VStack(alignment: .leading){
@@ -23,9 +23,9 @@ struct FloorsView: View {
             VStack{
                 ForEach(floorViewModel.floors) { floor in
                     NavigationLink(
-                        destination: ShowersView(houseName: houseName, floorName: floor.id),
+                        destination: ShowersView(house: house, floor: floor),
                         label: {
-                            FloorView(floor: floor)
+                            FloorView(house: house, floor: floor)
                                 .padding()
                                 .frame(height: 200)
                                 .padding(.top, 20)
@@ -37,16 +37,16 @@ struct FloorsView: View {
             
             Spacer()
         }
-        .navigationTitle(houseName)
+        .navigationTitle(house.id)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{
-            floorViewModel.getFloors(chosenHouse: houseName)
+            floorViewModel.getFloors(chosenHouse: house.id)
         }
     }
 }
 
 struct FloorsView_Previews: PreviewProvider {
     static var previews: some View {
-        FloorsView(floorViewModel: FloorViewModel(), houseName: "Descartes")
+        FloorsView(floorViewModel: FloorViewModel(), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House"))
     }
 }
