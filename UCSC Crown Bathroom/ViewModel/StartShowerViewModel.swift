@@ -7,10 +7,13 @@
 
 import Foundation
 import Firebase
+import RealmSwift
 
 class StartShowerViewModel: ObservableObject {
     
     private var db = Firestore.firestore()
+    
+    let realm = try! Realm()
     
     enum StartShowerResult {
         case success
@@ -39,14 +42,24 @@ class StartShowerViewModel: ObservableObject {
                         "isOccupied" : true,
                         "lastUpdated" : Timestamp(date: Date()),
                         "name" : shower.id,
-                        "duration" : duration
+                        "duration" : duration,
+                        "user" : self.realm.objects(User.self).first!.id
                     ]
                 )
+                
+                let localShower = LocalShower()
+                localShower.started = Date()
+                localShower.duration = duration
+                localShower.firestorePath = "\(path)/\(shower.id)"
+                localShower.floor = floorName
+                localShower.house = houseName
+                
+                try! self.realm.write({
+                    self.realm.add(localShower)
+                })
                 
                 return completion(.success)
             }
         }
-        
-
     }
 }

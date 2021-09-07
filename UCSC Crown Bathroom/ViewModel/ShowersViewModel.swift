@@ -33,9 +33,10 @@ class ShowersViewModel: ObservableObject {
                 let isOccupied = data["isOccupied"] as! Bool
                 let lastUpdated = data["lastUpdated"] as! Timestamp
                 let bathroom = "Main Bathroom"
-                let duration = data["duration"] as? Int ?? 0
+                let duration = data["duration"] as! Int
+                let user = data["user"] as? String ?? ""
                 
-                return Shower(id: id, isOccupied: isOccupied, lastUpdated: lastUpdated.dateValue(), bathroom: bathroom, duration: duration)
+                return Shower(id: id, isOccupied: isOccupied, lastUpdated: lastUpdated.dateValue(), bathroom: bathroom, duration: duration, user: user)
             }
             
             DispatchQueue.main.async {
@@ -55,7 +56,8 @@ class ShowersViewModel: ObservableObject {
                     "isOccupied" : false,
                     "lastUpdated" : Timestamp(date: Date()),
                     "name" : shower.id,
-                    "duration" : 0
+                    "duration" : 0,
+                    "user" : ""
                 ])
             }
         }

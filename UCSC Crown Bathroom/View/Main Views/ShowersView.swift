@@ -10,6 +10,7 @@ import SwiftUI
 struct ShowersView: View {
     @StateObject var showersViewModel: ShowersViewModel = ShowersViewModel()
     @State var showingAlert = false
+    @StateObject var signInViewModel: SignInViewModel
     
     let house: House
     let floor: Floor
@@ -37,7 +38,7 @@ struct ShowersView: View {
             
             VStack{
                 ForEach(showersViewModel.showers) { shower in
-                    ShowerView(shower: shower, house: house, floor: floor)
+                    ShowerView(signInViewModel: signInViewModel, shower: shower, house: house, floor: floor)
                         .padding()
                 }
             }
@@ -65,7 +66,7 @@ struct ShowersView_Previews: PreviewProvider {
         NavigationView{
             ShowersView(
                 showersViewModel: ShowersViewModel(),
-                house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House"),
+                signInViewModel: SignInViewModel(), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House"),
                 floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: "")
             )
         }

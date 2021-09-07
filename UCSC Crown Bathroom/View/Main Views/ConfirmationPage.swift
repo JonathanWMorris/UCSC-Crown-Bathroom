@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ConfirmationPage: View {
     
+    @StateObject var signInViewModel: SignInViewModel
+    
     let wasSuccessful: Bool
     let shower: Shower
     
@@ -59,20 +61,22 @@ struct ConfirmationPage: View {
                         .multilineTextAlignment(.center)
                         .padding(.top)
                         .animation(.easeIn)
-                    
                 }
                 
                 Spacer()
             }
             .padding(.horizontal)
         }
+        .onDisappear {
+            signInViewModel.checkForExistingShower()
+        }
     }
 }
 
 struct ConfirmationPage_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmationPage(wasSuccessful: true, shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 5))
+        ConfirmationPage(signInViewModel: SignInViewModel(), wasSuccessful: true, shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 5, user: ""))
         
-        ConfirmationPage(wasSuccessful: false, shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 5))
+        ConfirmationPage(signInViewModel: SignInViewModel(), wasSuccessful: false, shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 5, user: ""))
     }
 }

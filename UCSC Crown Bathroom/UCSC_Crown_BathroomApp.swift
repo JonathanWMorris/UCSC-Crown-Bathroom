@@ -7,16 +7,43 @@
 
 import SwiftUI
 import Firebase
+import RealmSwift
 
 @main
-struct UCSC_Crown_BathroomApp: App {
+struct UCSC_Crown_BathroomApp: SwiftUI.App {
+    
     init() {
         FirebaseApp.configure()
+        
+        let config = Realm.Configuration(schemaVersion: 1, migrationBlock:{migration, oldSchema in
+            if oldSchema < 1{}
+        })
+        
+        Realm.Configuration.defaultConfiguration = config
     }
+    
+    @StateObject var signInViewModel = SignInViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack{
+                if signInViewModel.userExists{
+                    if signInViewModel.thereIsExistingShower{
+                        ShowerExistsView(signInViewModel: signInViewModel)
+                            .animation(.easeIn)
+                    } else {
+                        ContentView(signInViewModel: signInViewModel)
+                            .animation(.easeIn)
+                    }
+                } else {
+                    SignInView(signInViewModel: signInViewModel)
+                        .animation(.easeIn)
+                }
+            }
+            .onAppear{
+                signInViewModel.isUserAuthenticated()
+                signInViewModel.checkForExistingShower()
+            }
         }
     }
 }

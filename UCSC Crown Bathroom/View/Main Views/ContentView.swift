@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var contentViewModel = ContentViewModel()
+    @StateObject var signInViewModel: SignInViewModel
     
     let columns = [
         GridItem(.adaptive(minimum: 100)),
@@ -21,7 +22,7 @@ struct ContentView: View {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(contentViewModel.houses) { house in
                         NavigationLink(
-                            destination: FloorsView(house: house),
+                            destination: FloorsView(signInViewModel: signInViewModel, house: house),
                             label: {
                                 HouseView(house: house)
                             })
@@ -42,6 +43,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(signInViewModel: SignInViewModel())
     }
 }

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>75728123376-k6uud41thv6t95gf873th0r5ftdig9r0.apps.googleusercontent.com</string>
+	<string>75728123376-k4d3otg0kiq8l0cn7dr4026u6e6rq3cv.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.75728123376-k6uud41thv6t95gf873th0r5ftdig9r0</string>
+	<string>com.googleusercontent.apps.75728123376-k4d3otg0kiq8l0cn7dr4026u6e6rq3cv</string>
 	<key>API_KEY</key>
 	<string>AIzaSyC1p1j1gAD7eU_MOrCoDCNzVOIEWkMO740</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.JonathanMorris.UCSC-Crown-Bathroom</string>
+	<string>com.JonathanMorris.UCSC-Bathroom</string>
 	<key>PROJECT_ID</key>
 	<string>ucsc-crown-bathroom</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:75728123376:ios:d2a44b6e020deca3845935</string>
+	<string>1:75728123376:ios:52b4bdcf639c720f845935</string>
 </dict>
 </plist>

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FloorsView: View {
     @StateObject var floorViewModel = FloorViewModel()
+    @StateObject var signInViewModel: SignInViewModel
     
     let house: House
     
@@ -23,7 +24,7 @@ struct FloorsView: View {
             VStack{
                 ForEach(floorViewModel.floors) { floor in
                     NavigationLink(
-                        destination: ShowersView(house: house, floor: floor),
+                        destination: ShowersView(signInViewModel: signInViewModel, house: house, floor: floor),
                         label: {
                             FloorView(house: house, floor: floor)
                                 .padding()
@@ -48,7 +49,7 @@ struct FloorsView: View {
 struct FloorsView_Previews: PreviewProvider {
     static var previews: some View {
         FloorsView(
-            floorViewModel: FloorViewModel(),
+            floorViewModel: FloorViewModel(), signInViewModel: SignInViewModel(),
             house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House")
         )
     }

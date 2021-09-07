@@ -11,6 +11,7 @@ struct StartShowerView: View {
     @State var durationInMinutes: Int = 5
     @State var confirmationSheetIsShown = false
     @State var wasSuccefull = true
+    @StateObject var signInViewModel: SignInViewModel
     
     @StateObject var startShowerViewModel = StartShowerViewModel()
     
@@ -101,7 +102,7 @@ struct StartShowerView: View {
         .navigationTitle(shower.id)
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $confirmationSheetIsShown, content: {
-            ConfirmationPage(wasSuccessful: wasSuccefull, shower: shower)
+            ConfirmationPage(signInViewModel: signInViewModel, wasSuccessful: wasSuccefull, shower: shower)
         })
     }
 }
@@ -109,7 +110,7 @@ struct StartShowerView: View {
 struct StartShowerView_Previews: PreviewProvider {
     static var previews: some View {
         StartShowerView(
-            shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 4),
+            signInViewModel: SignInViewModel(), shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 4, user: ""),
             house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"),
             floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: "")
         )
