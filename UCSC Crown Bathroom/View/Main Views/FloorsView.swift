@@ -47,6 +47,9 @@ struct FloorsView: View {
 
 struct FloorsView_Previews: PreviewProvider {
     static var previews: some View {
-        FloorsView(floorViewModel: FloorViewModel(), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House"))
+        FloorsView(
+            floorViewModel: FloorViewModel(),
+            house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House")
+        )
     }
 }

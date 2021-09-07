@@ -45,12 +45,21 @@ struct ShowerView: View {
                 Spacer()
                 
                 if shower.isOccupied{
-                    Text("\(shower.minutesSincePreviousShower) Minutes Ago")
-                        .font(.headline)
-                        .fontWeight(.regular)
-                        .foregroundColor(.white)
-                        .shadow(color: .black, radius: 2, x: 0, y: 0)
-                        .padding(30)
+                    if shower.durationLeft > 0 {
+                        Text("\(shower.durationLeft) Minutes Left")
+                            .font(.headline)
+                            .fontWeight(.regular)
+                            .foregroundColor(.white)
+                            .shadow(color: .black, radius: 2, x: 0, y: 0)
+                            .padding(30)
+                    } else{
+                        Text("Less than a minute left")
+                            .font(.headline)
+                            .fontWeight(.regular)
+                            .foregroundColor(.white)
+                            .shadow(color: .black, radius: 2, x: 0, y: 0)
+                            .padding(30)
+                    }
                 }
                 
                 if !shower.isOccupied {
@@ -75,14 +84,22 @@ struct ShowerView: View {
 
 struct ShowerView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerView(shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom"), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"), floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: ""))
-            .frame( height: 200, alignment: .center)
-            .padding()
-            .previewLayout(.sizeThatFits)
+        ShowerView(
+            shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 0),
+            house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"),
+            floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: "")
+        )
+        .frame( height: 200, alignment: .center)
+        .padding()
+        .previewLayout(.sizeThatFits)
         
-        ShowerView(shower: Shower(id: "Shower 1", isOccupied: true, lastUpdated: Date(), bathroom: "Main Bathroom"), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"), floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: ""))
-            .frame( height: 200, alignment: .center)
-            .padding()
-            .previewLayout(.sizeThatFits)
+        ShowerView(
+            shower: Shower(id: "Shower 1", isOccupied: true, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 10),
+            house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"),
+            floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: "")
+        )
+        .frame( height: 200, alignment: .center)
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }

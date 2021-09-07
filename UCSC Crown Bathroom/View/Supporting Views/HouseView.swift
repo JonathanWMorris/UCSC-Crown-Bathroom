@@ -32,10 +32,12 @@ struct HouseView: View {
 
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView(house: House(id: "Descartes", hexColor1: "0666FF", hexColor2: "5A5ADE", symbolName: "house"))
-            .frame(width: 200, height: 200, alignment: .center)
-            .previewLayout(.sizeThatFits)
-            .padding(40)
+        HouseView(
+            house: House(id: "Descartes", hexColor1: "0666FF", hexColor2: "5A5ADE", symbolName: "house")
+        )
+        .frame(width: 200, height: 200, alignment: .center)
+        .previewLayout(.sizeThatFits)
+        .padding(40)
         
     }
 }

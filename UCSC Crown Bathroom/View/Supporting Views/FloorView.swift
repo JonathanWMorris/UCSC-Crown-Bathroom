@@ -37,10 +37,13 @@ struct FloorView: View {
 
 struct FloorView_Previews: PreviewProvider {
     static var previews: some View {
-        FloorView(house: House(id: "Descartes", hexColor1: "08313A", hexColor2: "5CD85A", symbolName: "house"), floor: Floor(id: "First", number: 1, symbolName: "1.circle",
-                               hexColor1: "08313A", hexColor2: "5CD85A"))
-            .frame(height: 100, alignment: .center)
-            .padding()
-            .previewLayout(.sizeThatFits)
+        FloorView(
+            house: House(id: "Descartes", hexColor1: "08313A", hexColor2: "5CD85A", symbolName: "house"),
+            floor: Floor(id: "First", number: 1, symbolName: "1.circle",
+                         hexColor1: "08313A", hexColor2: "5CD85A")
+        )
+        .frame(height: 100, alignment: .center)
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }

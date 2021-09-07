@@ -19,16 +19,23 @@ class Shower: Identifiable {
     let vacantHexColor1: String = "097969"
     let vacantHexColor2: String = "AFE1AF"
     
+    let duration: Int
+    
     var minutesSincePreviousShower: Int {
         let differenceInSecconds = Date().timeIntervalSince1970 - lastUpdated.timeIntervalSince1970
         
         return Int(differenceInSecconds / 60)
     }
     
-    init(id: String, isOccupied:Bool, lastUpdated: Date, bathroom: String) {
+    var durationLeft: Int {
+        return duration - minutesSincePreviousShower
+    }
+    
+    init(id: String, isOccupied:Bool, lastUpdated: Date, bathroom: String, duration: Int) {
         self.id = id
         self.isOccupied = isOccupied
         self.lastUpdated = lastUpdated
         self.bathroom = bathroom
+        self.duration = duration
     }
 }
