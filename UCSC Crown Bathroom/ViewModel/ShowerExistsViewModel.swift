@@ -41,8 +41,10 @@ class ShowerExistsViewModel: ObservableObject {
                     "lastUpdated" : Timestamp(date: Date()),
                     "name" : shower!.id,
                     "duration" : 0,
-                    "user" : ""
+                    "user" : user.id
                 ])
+                
+                print("Removing")
                 
                 try! self.realm.write({
                     self.realm.delete(localShower)

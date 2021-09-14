@@ -15,8 +15,8 @@ struct UCSC_Crown_BathroomApp: SwiftUI.App {
     init() {
         FirebaseApp.configure()
         
-        let config = Realm.Configuration(schemaVersion: 1, migrationBlock:{migration, oldSchema in
-            if oldSchema < 1{}
+        let config = Realm.Configuration(schemaVersion: 2, migrationBlock:{migration, oldSchema in
+            if oldSchema < 2{ migration.deleteData(forType: "LocalShower") }
         })
         
         Realm.Configuration.defaultConfiguration = config

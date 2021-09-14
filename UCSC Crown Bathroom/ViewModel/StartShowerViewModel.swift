@@ -53,6 +53,7 @@ class StartShowerViewModel: ObservableObject {
                 localShower.firestorePath = "\(path)/\(shower.id)"
                 localShower.floor = floorName
                 localShower.house = houseName
+                localShower.name = shower.id
                 
                 try! self.realm.write({
                     self.realm.add(localShower)

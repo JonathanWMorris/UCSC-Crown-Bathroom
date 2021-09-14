@@ -8,12 +8,14 @@
 import Foundation
 import RealmSwift
 import CryptoKit
+import Firebase
 
 class SignInViewModel: ObservableObject {
     @Published var userExists = false
     @Published var thereIsExistingShower = false
     
     let realm = try! Realm()
+    private var db = Firestore.firestore()
     
     func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
@@ -75,6 +77,16 @@ class SignInViewModel: ObservableObject {
             if shower.durationLeft > 0 {
                 thereIsExistingShower = true
             } else {
+                let user = realm.objects(User.self).first!
+                
+                self.db.document(shower.firestorePath).setData([
+                    "isOccupied" : false,
+                    "lastUpdated" : Timestamp(date: Date()),
+                    "name" : shower.name,
+                    "duration" : 0,
+                    "user" : user.id
+                ])
+                
                 try! realm.write {
                     thereIsExistingShower = false
                     realm.delete(shower)

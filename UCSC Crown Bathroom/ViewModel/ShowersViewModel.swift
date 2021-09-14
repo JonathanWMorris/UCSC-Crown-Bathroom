@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import RealmSwift
 
 class ShowersViewModel: ObservableObject {
     @Published var showers: [Shower] = []
@@ -15,11 +16,14 @@ class ShowersViewModel: ObservableObject {
     
     private var db = Firestore.firestore()
     
+    var listener : ListenerRegistration? = nil
+    let realm = try! Realm()
     
     func getShowersInfo(house: String, floor: String) {
+        
         path = "Crown/\(house)/Floors/\(floor)/Bathrooms/Main Bathroom/Showers"
         
-        db.collection(path).addSnapshotListener { snapshot, error in
+        listener = db.collection(path).addSnapshotListener { snapshot, error in
             guard (error == nil) else { fatalError() }
             
             guard let snapshot = snapshot else { fatalError() }
@@ -47,18 +51,23 @@ class ShowersViewModel: ObservableObject {
         }
     }
     
-    
+    func removeListener() {
+        if let listener = listener {
+            listener.remove()
+        }
+    }
     
     @objc func checkDuration() {
         for shower in showers{
-            if shower.durationLeft < 0 {
+            if shower.isOccupied && shower.durationLeft < 0 {
                 self.db.collection(path).document(shower.id).setData([
                     "isOccupied" : false,
                     "lastUpdated" : Timestamp(date: Date()),
                     "name" : shower.id,
                     "duration" : 0,
-                    "user" : ""
+                    "user" : self.realm.objects(User.self).first!.id
                 ])
+                print("Removing")
             }
         }
     }

@@ -32,7 +32,8 @@ struct ShowersView: View {
             HStack{
                 Label("Live", systemImage: "record.circle")
                     .foregroundColor(.red)
-                    .padding([.leading, .top, .bottom])
+                    .padding([.leading, .bottom])
+                    .padding(.top, 5)
                 Spacer()
             }
             
@@ -54,6 +55,7 @@ struct ShowersView: View {
         }
         .onDisappear{
             showersViewModel.timer?.invalidate()
+            showersViewModel.removeListener()
         }
         .alert(isPresented: $showingAlert, content: {
             Alert(title: Text("Goth-ham"), dismissButton: .default(Text("goth daddy ham")))

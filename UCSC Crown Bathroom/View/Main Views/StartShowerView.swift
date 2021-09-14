@@ -13,6 +13,8 @@ struct StartShowerView: View {
     @State var wasSuccefull = true
     @StateObject var signInViewModel: SignInViewModel
     
+    @Environment(\.colorScheme) var colorScheme
+    
     @StateObject var startShowerViewModel = StartShowerViewModel()
     
     let shower: Shower
@@ -35,7 +37,7 @@ struct StartShowerView: View {
                     Image(systemName: "drop.fill")
                         .font(.system(size: CGFloat(20 * durationInMinutes)))
                         .foregroundColor(Color(hex: "266DD3"))
-                        .background(Color.white)
+                        .background(colorScheme == .light ? Color.white : Color.black)
                     
                     Text("\(durationInMinutes) Min")
                         .foregroundColor(.white)

@@ -20,6 +20,7 @@ class LocalShower: Object {
     @Persisted var firestorePath: String
     @Persisted var floor: String
     @Persisted var house: String
+    @Persisted var name: String
     
     var minutesSincePreviousShower: Int {
         let differenceInSecconds = Date().timeIntervalSince1970 - started.timeIntervalSince1970

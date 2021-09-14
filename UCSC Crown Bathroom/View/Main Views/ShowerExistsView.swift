@@ -66,6 +66,9 @@ struct ShowerExistsView: View {
                 .padding(.bottom, 50)
             }
             .padding(.horizontal)
+            .onAppear{
+                signInViewModel.checkForExistingShower()
+            }
         }
     }
 }
