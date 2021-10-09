@@ -10,11 +10,21 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var contentViewModel = ContentViewModel()
     @StateObject var signInViewModel: SignInViewModel
+    @Environment(\.horizontalSizeClass) var sizeClass
     
-    let columns = [
-        GridItem(.adaptive(minimum: 100)),
-        GridItem(.adaptive(minimum: 100))
-    ]
+    var columns: [GridItem] {
+        if sizeClass == .regular{
+            return [
+                GridItem()
+            ]
+        }else{
+            return [
+                GridItem(.adaptive(minimum: 100)),
+                GridItem(.adaptive(minimum: 100))
+            ]
+        }
+        
+    }
     
     var body: some View {
         NavigationView{
@@ -26,7 +36,7 @@ struct ContentView: View {
                             label: {
                                 HouseView(house: house)
                             })
-                            .frame(height: 150)
+                            .frame(height: 140)
                             .padding(5)
                     }
                 }
@@ -34,6 +44,7 @@ struct ContentView: View {
             }
             .animation(.easeIn)
             .navigationTitle("Select House")
+            FloorsView(signInViewModel: signInViewModel, house: contentViewModel.houses.first ?? House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: ""))
         }
         .onAppear{
             contentViewModel.getHouseListData()

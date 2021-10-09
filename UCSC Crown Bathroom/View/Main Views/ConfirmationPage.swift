@@ -41,6 +41,7 @@ struct ConfirmationPage: View {
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .animation(.easeIn)
+                        .foregroundColor(.black)
                     
                     Text("Your spot has been saved, but be quick and considerate for others who want to shower after you!")
                         .font(.title3)
@@ -48,12 +49,15 @@ struct ConfirmationPage: View {
                         .multilineTextAlignment(.center)
                         .padding(.top)
                         .animation(.easeIn)
+                        .foregroundColor(.black)
+                    
                 } else {
                     
                     Text("Failed")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .animation(.easeIn)
+                        .foregroundColor(.black)
                     
                     Text("Try again selecting a different shower, this shower was taken at the last second.")
                         .font(.title3)
@@ -61,6 +65,7 @@ struct ConfirmationPage: View {
                         .multilineTextAlignment(.center)
                         .padding(.top)
                         .animation(.easeIn)
+                        .foregroundColor(.black)
                 }
                 
                 Spacer()

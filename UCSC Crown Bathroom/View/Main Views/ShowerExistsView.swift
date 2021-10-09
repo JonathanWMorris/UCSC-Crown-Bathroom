@@ -33,6 +33,7 @@ struct ShowerExistsView: View {
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .animation(.easeIn)
+                        .foregroundColor(.black)
                     
                     Text("If you would like to book a shower somewhere else, cancel the previous shower.")
                         .font(.title3)
@@ -40,6 +41,7 @@ struct ShowerExistsView: View {
                         .multilineTextAlignment(.center)
                         .padding(.top)
                         .animation(.easeIn)
+                        .foregroundColor(.black)
                 
                 Spacer()
                 

@@ -34,7 +34,6 @@
 		0EBD846126E6D4F90053B6F8 /* RotatingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD846026E6D4F90053B6F8 /* RotatingIcon.swift */; };
 		0EBD846326E6D89E0053B6F8 /* ConfirmationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD846226E6D89E0053B6F8 /* ConfirmationPage.swift */; };
 		0EBD846526E6DDE00053B6F8 /* StackedDrops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD846426E6DDE00053B6F8 /* StackedDrops.swift */; };
-		0EBD846826E746390053B6F8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD846726E746390053B6F8 /* SignInView.swift */; };
 		0EBD846A26E748E50053B6F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD846926E748E50053B6F8 /* User.swift */; };
 		0EBD846C26E74BC10053B6F8 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD846B26E74BC10053B6F8 /* SignInViewModel.swift */; };
 		4BAAF7B32732085621157621 /* Pods_UCSC_Crown_BathroomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA6281806FDB8CE1742F804 /* Pods_UCSC_Crown_BathroomTests.framework */; };
@@ -93,7 +92,6 @@
 		0EBD846226E6D89E0053B6F8 /* ConfirmationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPage.swift; sourceTree = "<group>"; };
 		0EBD846426E6DDE00053B6F8 /* StackedDrops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedDrops.swift; sourceTree = "<group>"; };
 		0EBD846626E6FA8A0053B6F8 /* UCSC Crown Bathroom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UCSC Crown Bathroom.entitlements"; sourceTree = "<group>"; };
-		0EBD846726E746390053B6F8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		0EBD846926E748E50053B6F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0EBD846B26E74BC10053B6F8 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		2CA6281806FDB8CE1742F804 /* Pods_UCSC_Crown_BathroomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UCSC_Crown_BathroomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,7 +233,6 @@
 		0EBD845C26E6CADC0053B6F8 /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
-				0EBD846726E746390053B6F8 /* SignInView.swift */,
 				0E98203C26E2E807003B86C0 /* ContentView.swift */,
 				0E4A538426E5900B00E8306C /* FloorsView.swift */,
 				0E4A538D26E5BF6F00E8306C /* ShowersView.swift */,
@@ -536,7 +533,6 @@
 				0E5AD15626E6978A00EC563A /* StartShowerView.swift in Sources */,
 				0EBD846526E6DDE00053B6F8 /* StackedDrops.swift in Sources */,
 				0E4A538526E5900B00E8306C /* FloorsView.swift in Sources */,
-				0EBD846826E746390053B6F8 /* SignInView.swift in Sources */,
 				0E5AD15826E6984700EC563A /* Floor.swift in Sources */,
 				0E4A539226E5BFD000E8306C /* ShowersViewModel.swift in Sources */,
 				0E4A538E26E5BF6F00E8306C /* ShowersView.swift in Sources */,
@@ -702,7 +698,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "UCSC Crown Bathroom/UCSC Crown Bathroom.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UCSC Crown Bathroom/Preview Content\"";
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				ENABLE_PREVIEWS = YES;
@@ -712,7 +708,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Bathroom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -728,7 +724,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "UCSC Crown Bathroom/UCSC Crown Bathroom.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UCSC Crown Bathroom/Preview Content\"";
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				ENABLE_PREVIEWS = YES;
@@ -738,7 +734,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.UCSC-Bathroom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -755,7 +751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				INFOPLIST_FILE = "UCSC Crown BathroomTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -778,7 +774,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				INFOPLIST_FILE = "UCSC Crown BathroomTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

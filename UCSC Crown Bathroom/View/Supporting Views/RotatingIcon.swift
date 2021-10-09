@@ -9,8 +9,7 @@ import SwiftUI
 
 struct RotatingIcon: View {
     @State private var isAnimating = false
-    @State private var showProgress = false
-    @State private var showingAlert = false
+    @State private var showProgress = true
     
     let systemImageName: String
     
@@ -20,26 +19,11 @@ struct RotatingIcon: View {
     }
     
     var body: some View {
-        Button(action: {
-            showingAlert.toggle()
-        }, label: {
-            if showProgress {
-                Image(systemName: systemImageName)
-                    .rotationEffect(Angle(degrees: self.isAnimating ? 360 : 0.0))
-                    .animation(self.isAnimating ? foreverAnimation : .default)
-                    .onAppear { self.isAnimating = true }
-                    .onDisappear { self.isAnimating = false }
-                
-            } else {
-                Image(systemName: systemImageName)
-            }
-        })
-        
-        .buttonStyle(PlainButtonStyle())
-        .onAppear { self.showProgress = true }
-        .alert(isPresented: $showingAlert, content: {
-            Alert(title: Text("Fr Bro"), dismissButton: .default(Text("Fr Bro")))
-        })
+        Image(systemName: systemImageName)
+            .rotationEffect(Angle(degrees: self.isAnimating ? 360 : 0.0))
+            .animation(self.isAnimating ? foreverAnimation : .default)
+            .onAppear { self.isAnimating = true }
+            .onDisappear { self.isAnimating = false }
     }
 }
 

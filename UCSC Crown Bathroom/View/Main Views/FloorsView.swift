@@ -22,21 +22,21 @@ struct FloorsView: View {
                 .animation(.linear)
             
             VStack{
-                ForEach(floorViewModel.floors) { floor in
-                    NavigationLink(
-                        destination: ShowersView(signInViewModel: signInViewModel, house: house, floor: floor),
-                        label: {
-                            FloorView(house: house, floor: floor)
-                                .padding()
-                                .frame(height: 200)
-                                .padding(.top, 20)
-                        })
-                        .padding(5)
+                ScrollView{
+                    ForEach(floorViewModel.floors) { floor in
+                        NavigationLink(
+                            destination: ShowersView(signInViewModel: signInViewModel, house: house, floor: floor),
+                            label: {
+                                FloorView(house: house, floor: floor)
+                                    .padding()
+                                    .frame(height: 175)
+                                    .padding(.top, 10)
+                            })
+                    }
+
                 }
             }
             .animation(.easeIn)
-            
-            Spacer()
         }
         .navigationTitle(house.id)
         .navigationBarTitleDisplayMode(.inline)

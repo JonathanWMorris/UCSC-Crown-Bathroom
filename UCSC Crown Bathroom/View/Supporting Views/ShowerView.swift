@@ -76,7 +76,7 @@ struct ShowerView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 40))
                                 .shadow(color: .black, radius: 5, x: 3, y: 3)
                         })
-                        .padding(30)
+                        .padding(25)
                 }
             }
         }

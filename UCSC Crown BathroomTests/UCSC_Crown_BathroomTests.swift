@@ -45,8 +45,8 @@ class UCSC_Crown_BathroomTests: XCTestCase {
     func testGetShowers() throws {
         showersViewModel.getShowersInfo(house: "Descartes", floor: "First")
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            XCTAssert(self.showersViewModel.showers.count == 3)
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            XCTAssert(self.showersViewModel.showers.count == 3)
+        }
     }
 }

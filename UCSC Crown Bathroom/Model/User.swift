@@ -9,9 +9,7 @@ import Foundation
 import RealmSwift
 
 class User: Object {
-    @Persisted var name: String
     @Persisted var id: String
-    @Persisted var email: String
 }
 
 class LocalShower: Object {

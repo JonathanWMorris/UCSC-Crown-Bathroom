@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ShowersView: View {
     @StateObject var showersViewModel: ShowersViewModel = ShowersViewModel()
-    @State var showingAlert = false
     @StateObject var signInViewModel: SignInViewModel
     
     let house: House
@@ -17,35 +16,27 @@ struct ShowersView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            
-            Button(action: {
-                showingAlert.toggle()
-            }, label: {
+            HStack{
                 Text("Select Shower")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
-                    .padding([.leading, .top], 15)
                     .animation(.linear)
-            })
-            .buttonStyle(PlainButtonStyle())
-            
-            HStack{
+                
+                Spacer()
                 Label("Live", systemImage: "record.circle")
                     .foregroundColor(.red)
-                    .padding([.leading, .bottom])
-                    .padding(.top, 5)
-                Spacer()
             }
+            .padding([.leading, .top, .trailing], 15)
+            .padding(.bottom, 5)
             
-            VStack{
+            ScrollView{
                 ForEach(showersViewModel.showers) { shower in
                     ShowerView(signInViewModel: signInViewModel, shower: shower, house: house, floor: floor)
-                        .padding()
+                        .frame(height: 200)
+                        .padding([.leading, .top, .trailing])
                 }
             }
             .animation(.easeIn)
-            
-            Spacer()
         }
         .navigationTitle("\(floor.id) Floor Showers")
         .navigationBarTitleDisplayMode(.inline)
@@ -57,9 +48,6 @@ struct ShowersView: View {
             showersViewModel.timer?.invalidate()
             showersViewModel.removeListener()
         }
-        .alert(isPresented: $showingAlert, content: {
-            Alert(title: Text("Goth-ham"), dismissButton: .default(Text("goth daddy ham")))
-        })
     }
 }
 

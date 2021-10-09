@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import RealmSwift
+import AppTrackingTransparency
 
 @main
 struct UCSC_Crown_BathroomApp: SwiftUI.App {
@@ -15,11 +16,17 @@ struct UCSC_Crown_BathroomApp: SwiftUI.App {
     init() {
         FirebaseApp.configure()
         
-        let config = Realm.Configuration(schemaVersion: 2, migrationBlock:{migration, oldSchema in
-            if oldSchema < 2{ migration.deleteData(forType: "LocalShower") }
+        let config = Realm.Configuration(schemaVersion: 3, migrationBlock:{migration, oldSchema in
+            if oldSchema < 3{
+                migration.deleteData(forType: "User")
+            }
+            if oldSchema < 2{
+                migration.deleteData(forType: "LocalShower")
+            }
         })
         
         Realm.Configuration.defaultConfiguration = config
+        
     }
     
     @StateObject var signInViewModel = SignInViewModel()
@@ -35,14 +42,15 @@ struct UCSC_Crown_BathroomApp: SwiftUI.App {
                         ContentView(signInViewModel: signInViewModel)
                             .animation(.easeIn)
                     }
-                } else {
-                    SignInView(signInViewModel: signInViewModel)
-                        .animation(.easeIn)
                 }
             }
             .onAppear{
                 signInViewModel.isUserAuthenticated()
                 signInViewModel.checkForExistingShower()
+                
+                ATTrackingManager.requestTrackingAuthorization { status in
+                    print(status)
+                }
             }
         }
     }
