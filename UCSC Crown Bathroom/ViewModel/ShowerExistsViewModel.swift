@@ -16,27 +16,39 @@ class ShowerExistsViewModel: ObservableObject {
     let realm = try! Realm()
     
     func cancelShower(localShower: LocalShower, signInViewModel: SignInViewModel) {
-        
-        db.document(localShower.firestorePath).getDocument { snapshot, error in
+        let path = "\(localShower.firestorePath)/\(localShower.name)"
+        db.document(path).getDocument { snapshot, error in
             guard error == nil else { fatalError() }
             guard let snapshot = snapshot else { fatalError() }
             
-            let shower = snapshot.data().map { (data) -> Shower in
+            let shower = snapshot.data().map { (data) -> Item in
+                
                 let name = data["name"] as! String
                 let isOccupied = data["isOccupied"] as! Bool
                 let lastUpdated = data["lastUpdated"] as! Timestamp
-                let bathroom = "Main Bathroom"
+                let path = localShower.firestorePath
                 let duration = data["duration"] as! Int
                 let user = data["user"] as! String
                 
+                var type: ItemType {
+                    if name.contains("Shower"){
+                        return .Shower
+                    }
+                    else if name.contains("Dryer"){
+                        return .Dryer
+                    }
+                    else{
+                        return .Washer
+                    }
+                }
                 
-                return Shower(id: name, isOccupied: isOccupied, lastUpdated: lastUpdated.dateValue(), bathroom: bathroom, duration: duration, user: user)
+                return Item(id: name, isOccupied: isOccupied, lastUpdated: lastUpdated.dateValue(), collectionPath: path, duration: duration, user: user, type: type)
             }
             
             let user = self.realm.objects(User.self).first!
             
             if shower!.user == user.id {
-                self.db.document(localShower.firestorePath).setData([
+                self.db.document(path).setData([
                     "isOccupied" : false,
                     "lastUpdated" : Timestamp(date: Date()),
                     "name" : shower!.id,

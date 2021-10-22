@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ShowersView: View {
-    @StateObject var showersViewModel: ShowersViewModel = ShowersViewModel()
+struct FloorItemsView: View {
+    @StateObject var itemsViewModel: ItemsViewModel = ItemsViewModel()
     @StateObject var signInViewModel: SignInViewModel
     
     let house: House
@@ -17,11 +17,17 @@ struct ShowersView: View {
     var body: some View {
         VStack(alignment: .leading){
             HStack{
-                Text("Select Shower")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .animation(.linear)
-                
+                if floor.id == "Basement"{
+                    Text("Select Washer/Dryer")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .animation(.linear)
+                }else{
+                    Text("Select Shower")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .animation(.linear)
+                }
                 Spacer()
                 Label("Live", systemImage: "record.circle")
                     .foregroundColor(.red)
@@ -30,23 +36,23 @@ struct ShowersView: View {
             .padding(.bottom, 5)
             
             ScrollView{
-                ForEach(showersViewModel.showers) { shower in
-                    ShowerView(signInViewModel: signInViewModel, shower: shower, house: house, floor: floor)
+                ForEach(itemsViewModel.items) { shower in
+                    ItemView(signInViewModel: signInViewModel, item: shower, house: house, floor: floor)
                         .frame(height: 200)
                         .padding([.leading, .top, .trailing])
                 }
             }
             .animation(.easeIn)
         }
-        .navigationTitle("\(floor.id) Floor Showers")
+        .navigationTitle("\(floor.id) Floor Items")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{
-            showersViewModel.timer?.invalidate()
-            showersViewModel.getShowersInfo(house: house.id, floor: floor.id)
+            itemsViewModel.timer?.invalidate()
+            itemsViewModel.getItemsInfo(house: house.id, floor: floor.id)
         }
         .onDisappear{
-            showersViewModel.timer?.invalidate()
-            showersViewModel.removeListener()
+            itemsViewModel.timer?.invalidate()
+            itemsViewModel.removeListener()
         }
     }
 }
@@ -54,8 +60,8 @@ struct ShowersView: View {
 struct ShowersView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            ShowersView(
-                showersViewModel: ShowersViewModel(),
+            FloorItemsView(
+                itemsViewModel: ItemsViewModel(),
                 signInViewModel: SignInViewModel(), house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "House"),
                 floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: "")
             )

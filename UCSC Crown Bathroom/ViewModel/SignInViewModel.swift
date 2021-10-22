@@ -41,7 +41,7 @@ class SignInViewModel: ObservableObject {
         let showers = realm.objects(LocalShower.self)
         
         for shower in showers {
-            if shower.durationLeft > 0 {
+            if shower.durationLeft > 0{
                 thereIsExistingShower = true
             } else {
                 let user = realm.objects(User.self).first!

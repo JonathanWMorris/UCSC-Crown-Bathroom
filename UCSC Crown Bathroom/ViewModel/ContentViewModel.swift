@@ -21,7 +21,6 @@ class ContentViewModel: ObservableObject {
             
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
-                
                 return
             }
             

@@ -9,23 +9,23 @@ import Foundation
 import Firebase
 import RealmSwift
 
-class StartShowerViewModel: ObservableObject {
+enum StartItemResult {
+    case success
+    case occupied
+    case unknown
+}
+
+class StartItemViewModel: ObservableObject {
     
     private var db = Firestore.firestore()
     
     let realm = try! Realm()
     
-    enum StartShowerResult {
-        case success
-        case occupied
-        case unknown
-    }
-    
     func startShower(houseName: String, floorName: String,
-                     bathroomName: String, shower: Shower,
-                     duration: Int, completion: @escaping  (StartShowerResult) -> ()) {
+                     bathroomName: String, shower: Item,
+                     duration: Int, completion: @escaping  (StartItemResult) -> ()) {
         
-        let path = "Crown/\(houseName)/Floors/\(floorName)/Bathrooms/\(bathroomName)/Showers"
+        let path = shower.collectionPath
         
         db.collection(path).document(shower.id).getDocument { snapshot, error in
             guard error == nil else { return completion(.unknown) }
@@ -47,17 +47,19 @@ class StartShowerViewModel: ObservableObject {
                     ]
                 )
                 
-                let localShower = LocalShower()
-                localShower.started = Date()
-                localShower.duration = duration
-                localShower.firestorePath = "\(path)/\(shower.id)"
-                localShower.floor = floorName
-                localShower.house = houseName
-                localShower.name = shower.id
-                
-                try! self.realm.write({
-                    self.realm.add(localShower)
-                })
+                if shower.type == .Shower{
+                    let localShower = LocalShower()
+                    localShower.started = Date()
+                    localShower.duration = duration
+                    localShower.firestorePath = path
+                    localShower.floor = floorName
+                    localShower.house = houseName
+                    localShower.name = shower.id
+                    
+                    try! self.realm.write({
+                        self.realm.add(localShower)
+                    })
+                }
                 
                 return completion(.success)
             }

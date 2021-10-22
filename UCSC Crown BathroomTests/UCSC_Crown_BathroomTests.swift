@@ -12,14 +12,14 @@ class UCSC_Crown_BathroomTests: XCTestCase {
     
     var contentViewModel = ContentViewModel()
     var floorViewModel = FloorViewModel()
-    var showersViewModel = ShowersViewModel()
+    var showersViewModel = ItemsViewModel()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         contentViewModel = ContentViewModel()
         floorViewModel = FloorViewModel()
-        showersViewModel = ShowersViewModel()
+        showersViewModel = ItemsViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -43,10 +43,10 @@ class UCSC_Crown_BathroomTests: XCTestCase {
     }
     
     func testGetShowers() throws {
-        showersViewModel.getShowersInfo(house: "Descartes", floor: "First")
+        showersViewModel.getItemsInfo(house: "Descartes", floor: "First")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            XCTAssert(self.showersViewModel.showers.count == 3)
+            XCTAssert(self.showersViewModel.items.count == 3)
         }
     }
 }

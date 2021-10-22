@@ -12,21 +12,28 @@ struct ConfirmationPage: View {
     @StateObject var signInViewModel: SignInViewModel
     
     let wasSuccessful: Bool
-    let shower: Shower
+    let item: Item
     
     var body: some View {
         ZStack{
             LinearGradient(gradient: Gradient(
-                            colors: [
-                                Color(hex: wasSuccessful ? "AFE1AF" : "ffbaba"),
-                                Color(hex: wasSuccessful ? "7FFFD4" : "ff5252")]),
+                colors: [
+                    Color(hex: wasSuccessful ? "AFE1AF" : "ffbaba"),
+                    Color(hex: wasSuccessful ? "7FFFD4" : "ff5252")]),
                            startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
             VStack{
                 
+                
                 if wasSuccessful{
-                    StackedDrops()
+                    if item.type == .Shower{
+                        StackedDrops()
+                    }else{
+                        RotatingIcon(systemImageName: "ipodshuffle.gen2")
+                            .font(.system(size: 100))
+                            .padding(.top, 50)
+                    }
                 }else{
                     RotatingIcon(systemImageName: "drop.triangle")
                         .font(.system(size: 100))
@@ -43,7 +50,7 @@ struct ConfirmationPage: View {
                         .animation(.easeIn)
                         .foregroundColor(.black)
                     
-                    Text("Your spot has been saved, but be quick and considerate for others who want to shower after you!")
+                    Text("Your spot has been saved for the \(item.type.rawValue)!")
                         .font(.title3)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
@@ -80,8 +87,10 @@ struct ConfirmationPage: View {
 
 struct ConfirmationPage_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmationPage(signInViewModel: SignInViewModel(), wasSuccessful: true, shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 5, user: ""))
+        ConfirmationPage(signInViewModel: SignInViewModel(), wasSuccessful: true, item: Item(id: "Shower 1", isOccupied: false, lastUpdated: Date(), collectionPath: "Main Bathroom", duration: 5, user: "", type: .Shower))
         
-        ConfirmationPage(signInViewModel: SignInViewModel(), wasSuccessful: false, shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 5, user: ""))
+        ConfirmationPage(signInViewModel: SignInViewModel(), wasSuccessful: true, item: Item(id: "Shower 1", isOccupied: false, lastUpdated: Date(), collectionPath: "Main Bathroom", duration: 5, user: "", type: .Washer))
+        
+        ConfirmationPage(signInViewModel: SignInViewModel(), wasSuccessful: false, item: Item(id: "Shower 1", isOccupied: false, lastUpdated: Date(), collectionPath: "Main Bathroom", duration: 5, user: "", type: .Washer))
     }
 }

@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ShowerView: View {
+struct ItemView: View {
     @StateObject var signInViewModel: SignInViewModel
     
-    let shower: Shower
+    let item: Item
     let house: House
     let floor: Floor
     
@@ -18,25 +18,25 @@ struct ShowerView: View {
         ZStack{
             LinearGradient(gradient: Gradient(
                             colors: [
-                                Color(hex: shower.isOccupied ? shower.occupiedHexColor1 :
-                                        shower.vacantHexColor1),
-                                Color(hex: shower.isOccupied ? shower.occupiedHexColor2 :
-                                        shower.vacantHexColor2)]),
+                                Color(hex: item.isOccupied ? item.occupiedHexColor1 :
+                                        item.vacantHexColor1),
+                                Color(hex: item.isOccupied ? item.occupiedHexColor2 :
+                                        item.vacantHexColor2)]),
                            startPoint: .topLeading, endPoint: .bottomTrailing)
             HStack{
                 VStack{
-                    Text(Image(systemName: shower.isOccupied ? "person.fill" : "checkmark"))
+                    Text(Image(systemName: item.isOccupied ? "person.fill" : "checkmark"))
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                     
-                    Text(shower.id)
+                    Text(item.id)
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.top, 10)
                     
                     Spacer()
                     
-                    Text(shower.isOccupied ? "Occupied" : "Vacant")
+                    Text(item.isOccupied ? "Occupied" : "Vacant")
                         .font(.subheadline)
                         .fontWeight(.regular)
                 }
@@ -46,9 +46,9 @@ struct ShowerView: View {
                 
                 Spacer()
                 
-                if shower.isOccupied{
-                    if shower.durationLeft > 0 {
-                        Text("\(shower.durationLeft) Minutes Left")
+                if item.isOccupied{
+                    if item.durationLeft > 0 {
+                        Text("\(item.durationLeft) Minutes Left")
                             .font(.headline)
                             .fontWeight(.regular)
                             .foregroundColor(.white)
@@ -64,15 +64,15 @@ struct ShowerView: View {
                     }
                 }
                 
-                if !shower.isOccupied {
+                if !item.isOccupied {
                     NavigationLink(
-                        destination: StartShowerView(signInViewModel: signInViewModel, shower: shower, house: house, floor: floor),
+                        destination: StartView(signInViewModel: signInViewModel, item: item, house: house, floor: floor),
                         label: {
                             Text("Start")
                                 .padding(30)
                                 .font(.title)
                                 .background(Color(.white))
-                                .foregroundColor(Color(hex: shower.vacantHexColor1))
+                                .foregroundColor(Color(hex: item.vacantHexColor1))
                                 .clipShape(RoundedRectangle(cornerRadius: 40))
                                 .shadow(color: .black, radius: 5, x: 3, y: 3)
                         })
@@ -86,8 +86,8 @@ struct ShowerView: View {
 
 struct ShowerView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerView(
-            signInViewModel: SignInViewModel(), shower: Shower(id: "Shower 1", isOccupied: false, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 0, user: ""),
+        ItemView(
+            signInViewModel: SignInViewModel(), item: Item(id: "Shower 1", isOccupied: false, lastUpdated: Date(), collectionPath: "Main Bathroom", duration: 0, user: "", type: .Shower),
             house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"),
             floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: "")
         )
@@ -95,8 +95,8 @@ struct ShowerView_Previews: PreviewProvider {
         .padding()
         .previewLayout(.sizeThatFits)
         
-        ShowerView(
-            signInViewModel: SignInViewModel(), shower: Shower(id: "Shower 1", isOccupied: true, lastUpdated: Date(), bathroom: "Main Bathroom", duration: 10, user: ""),
+        ItemView(
+            signInViewModel: SignInViewModel(), item: Item(id: "Shower 1", isOccupied: true, lastUpdated: Date(), collectionPath: "Main Bathroom", duration: 10, user: "", type: .Shower),
             house: House(id: "Descartes", hexColor1: "", hexColor2: "", symbolName: "house"),
             floor: Floor(id: "First", number: 1, symbolName: "1.circle", hexColor1: "", hexColor2: "")
         )

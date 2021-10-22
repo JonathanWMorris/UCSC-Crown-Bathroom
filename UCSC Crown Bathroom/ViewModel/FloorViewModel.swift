@@ -40,6 +40,8 @@ class FloorViewModel: ObservableObject {
                         return 2
                     case "Third":
                         return 3
+                    case "Basement":
+                        return 0
                     default:
                         fatalError()
                     }

@@ -21,7 +21,7 @@ struct StackedDrops: View {
             }
             .font(.system(size: 50))
             .foregroundColor(.blue)
-            .shadow(radius: 10)
+            .shadow(radius: 5)
             .padding(.top)
             
             HStack{
@@ -33,7 +33,7 @@ struct StackedDrops: View {
             }
             .font(.system(size: 50))
             .foregroundColor(.blue)
-            .shadow(radius: 10)
+            .shadow(radius: 5)
             .padding(.top)
             
             HStack{
@@ -43,14 +43,14 @@ struct StackedDrops: View {
             }
             .font(.system(size: 50))
             .foregroundColor(.blue)
-            .shadow(radius: 10)
+            .shadow(radius: 5)
             .padding(.top)
             HStack{
                 RotatingIcon(systemImageName: "drop.fill")
             }
             .font(.system(size: 50))
             .foregroundColor(.blue)
-            .shadow(radius: 10)
+            .shadow(radius: 5)
             .padding(.top)
         }
     }

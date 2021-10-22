@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 import RealmSwift
 import AppTrackingTransparency
+import UserNotifications
 
 @main
 struct UCSC_Crown_BathroomApp: SwiftUI.App {
@@ -27,6 +28,9 @@ struct UCSC_Crown_BathroomApp: SwiftUI.App {
         
         Realm.Configuration.defaultConfiguration = config
         
+        ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+            //you got permission to track
+        })
     }
     
     @StateObject var signInViewModel = SignInViewModel()
@@ -47,10 +51,6 @@ struct UCSC_Crown_BathroomApp: SwiftUI.App {
             .onAppear{
                 signInViewModel.isUserAuthenticated()
                 signInViewModel.checkForExistingShower()
-                
-                ATTrackingManager.requestTrackingAuthorization { status in
-                    print(status)
-                }
             }
         }
     }

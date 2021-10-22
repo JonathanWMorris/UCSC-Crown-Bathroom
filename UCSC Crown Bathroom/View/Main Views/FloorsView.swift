@@ -25,12 +25,11 @@ struct FloorsView: View {
                 ScrollView{
                     ForEach(floorViewModel.floors) { floor in
                         NavigationLink(
-                            destination: ShowersView(signInViewModel: signInViewModel, house: house, floor: floor),
+                            destination: FloorItemsView(signInViewModel: signInViewModel, house: house, floor: floor),
                             label: {
                                 FloorView(house: house, floor: floor)
                                     .padding()
                                     .frame(height: 175)
-                                    .padding(.top, 10)
                             })
                     }
 
